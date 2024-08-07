@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-import { Express } from 'express';
+import express from 'express'; // Replace with a direct import for type hinting, if necessary.
 import AppController from '../controllers/AppController';
 import AuthController from '../controllers/AuthController';
 import UsersController from '../controllers/UsersController';
@@ -8,10 +7,11 @@ import { basicAuthenticate, xTokenAuthenticate } from '../middlewares/auth';
 import { APIError, errorResponse } from '../middlewares/error';
 
 /**
- * Injects routes with their handlers to the given Express application.
- * @param {Express} api
+ * InjectRoutes with their handlers into the provided Express application.
+ * @param {express.Application} api - The Express application instance to inject routes into.
  */
-const injectRoutes = (api) => {
+const injectRoutes = (api) =>
+  {
   api.get('/status', AppController.getStatus);
   api.get('/stats', AppController.getStats);
 
