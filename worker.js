@@ -12,8 +12,8 @@ const fileQueue = new Queue('thumbnail generation');
 const userQueue = new Queue('email sending');
 
 /**
- * this code works as: 
- * Generates the thumbnail of an image with a given width size.
+ * this code works as:
+ * enerates the thumbnail of an image with a given width size.
  * @param {String} filePath The location of the original file.
  * @param {number} size The width of the thumbnail.
  * @returns {Promise<void>}
